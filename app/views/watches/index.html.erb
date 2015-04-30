@@ -1,17 +1,17 @@
 <section class="watches">
 	<% @watches.each do |watch| %>
-				<div class ="watch">
+			<div class ="watch">
 			
 			<!-- Add in link to showpage -->
-			<%= link_to watch_path(1) do %>
+			<%= link_to watch_path(watch) do %>
 				
 				<!-- Add in image here -->
 				<div class ="price">
 					<!-- link this to new_orders -->
-					<span><%= watch[:price_in_pence] %></span>
+					<span><%= watch.price_in_pence %></span>
 				</div>
 				
-				<h2><%= watch[:name] %></h2>
+				<h2><%= watch.name %></h2>
 
 			<% end %>
 		</div>

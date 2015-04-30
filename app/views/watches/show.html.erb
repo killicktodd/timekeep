@@ -3,8 +3,8 @@
 </section>
 
 <section class="watch info">
-	<h2><%= @watch[:name] %></h2>
-	<%= simple_format @watch[:description] %>
+	<h2><%= @watch.name %></h2>
+	<%= simple_format @watch.description %>
 	<div>
 		<span>Posted by <%# mail_to @watch.user.email, @watch.user.name %></span>
 	</div>
