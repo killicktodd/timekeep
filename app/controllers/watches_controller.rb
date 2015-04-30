@@ -8,6 +8,7 @@ class WatchesController < ApplicationController
   end
 
   def show
+  	@watch = {name: "Backup Black", description: "Backup Black Lorem ipsum", price_in_pence: 50000}
   end
 
   def new
