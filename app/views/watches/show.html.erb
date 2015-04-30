@@ -1,2 +1,20 @@
-<h1>Watches#show</h1>
-<p>Find me in app/views/watches/show.html.erb</p>
+<section class="watch_large">
+	<!-- include large image here -->
+</section>
+
+<section class="watch info">
+	<h2><%= @watch[:name] %></h2>
+	<%= simple_format @watch[:description] %>
+	<div>
+		<span>Posted by <%# mail_to @watch.user.email, @watch.user.name %></span>
+	</div>
+	<div class="actions">
+		<%# if current user is logged in and owns the watch %>
+			<%= link_to "Edit", edit_watch_path(@watch) %>
+			<%= link_to "Delete", watch_path(@watch), method: :delete, class: "button", data: {confirm: "Are you sure?"} %>
+		<%# else %>
+			<b><%= @watch[:price_in_pence] %></b>
+			<%= link_to "Buy" %>
+		<%# end %>
+	</div>
+</section>
