@@ -1,2 +1,10 @@
-<h1>Watches#new</h1>
-<p>Find me in app/views/watches/new.html.erb</p>
+<%= simple_form_for @watch do |f| %>
+	<%= f.input :name %>
+	<%= f.input :description %>
+	<%= f.input :price_in_pence %>
+	<%= f.input :style %>
+	<%= f.input :gender %>
+	<%= f.input :brand %>
+	<%= f.input :pre_owned %>
+	<%= f.button :submit, "Upload Watch" %>
+<% end %>
