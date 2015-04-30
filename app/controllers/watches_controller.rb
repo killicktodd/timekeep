@@ -29,6 +29,14 @@ class WatchesController < ApplicationController
 
   def update
     @watch = Watch.find(params[:id])
+
+    if @watch.update(watch_params)
+      flash[:success] = "Update #{@watch.name}"
+      redirect_to @watch
+    else
+      flash[:error] = "Please check form for errors and try again"
+      render :edit
+    end 
   end
 
   def destroy
