@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430110525) do
+ActiveRecord::Schema.define(version: 20150430135142) do
 
   create_table "watches", force: true do |t|
     t.string   "name"
@@ -21,9 +21,13 @@ ActiveRecord::Schema.define(version: 20150430110525) do
     t.text     "description"
     t.integer  "price_in_pence"
     t.integer  "user_id"
-    t.boolean  "pre_owned",      default: false
+    t.boolean  "pre_owned",          default: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end
