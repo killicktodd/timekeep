@@ -1,0 +1,507 @@
+// @import url(http://fonts.googleapis.com/css?family=Signika:400,300,600,700);
+/* latin-ext */
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Signika-Light'), url(http://fonts.gstatic.com/s/signika/v6/Z-FsjIS3sPD5Zt6xiv44RwsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Signika-Light'), url(http://fonts.gstatic.com/s/signika/v6/koFYE26bhT88HgRA8f4vbQzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Signika'), local('Signika-Regular'), url(http://fonts.gstatic.com/s/signika/v6/ES-hggNmXmQgA9p5FjvOJ1KPGs1ZzpMvnHX-7fPOuAc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Signika'), local('Signika-Regular'), url(http://fonts.gstatic.com/s/signika/v6/DgXTNsU4VcVVFTc7jwBZzwLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Signika-Semibold'), url(http://fonts.gstatic.com/s/signika/v6/8-PQNacfI9IhpgehJGCuGAsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Signika-Semibold'), url(http://fonts.gstatic.com/s/signika/v6/FZa_MODmDkR9DTu5jHSnSQzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Signika-Bold'), url(http://fonts.gstatic.com/s/signika/v6/F587cG5P5ff3TX6w4JlorwsYbbCjybiHxArTLjt7FRU.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Signika';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Signika-Bold'), url(http://fonts.gstatic.com/s/signika/v6/7M5kxD4eGxuhgFaIk95pBQzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+$body: #111;
+$dark: #111;
+$grey: #eceae9;
+$darkgrey: #9c9990;
+$light: #fff;
+$highlight: #f6c841;
+$primary: #648381;
+$success: #648381;
+$error: #c84630;
+
+body, html { height: 100%;}
+body {
+  border-top: 15px solid $highlight;
+  font-family: "Signika";
+  color: $body;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.container {
+  min-height: 100%;
+  max-width: 960px;
+  margin: 0 auto -110px auto;
+  &:after {
+    content: "";
+    display: block;
+    height: 110px;
+  }
+}
+
+a, a:focus, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.3;
+}
+
+p em {
+  font-weight: 500;
+  a {
+    color: $primary;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 30px;
+  color: $primary;
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+header {
+  @extend .clearfix;
+  margin: 40px 0 60px 0;
+  border-bottom: 1px solid $dark;
+  div, .actions {
+    float: right;
+    line-height: 60px;
+  }
+  h1 {
+    float: left;
+  }
+
+  .flash {
+    position: absolute;
+    width: 960px;
+    clear: both;
+    text-align: right;
+    p {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .error {
+    border-top: 1px solid $error;
+    border-bottom: 1px solid $error;
+    color: $error;
+  }
+  .success {
+    border-top: 1px solid $success;
+    border-bottom: 1px solid $success;
+    color: $success;
+  }
+}
+
+nav {
+  @extend .clearfix;
+  padding-bottom: 40px;
+}
+
+.actions, .action {
+  a {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border: 2px solid $light;
+    font-weight: 200;
+    transition: all 200ms ease;
+
+    &:hover:not(:last-child) {
+      border-color: $primary;
+    }
+
+    &:not(:first-child) {
+      margin-left: 50px;
+    }
+
+    &.button, &:last-child {
+      @extend .button;
+    }
+  }
+}
+
+button {
+  @extend .button;
+  width: 300px;
+}
+
+.button {
+  border: none;
+  border: 2px solid $light;
+  border-color: $primary;
+  background-color: $primary;
+  color: $light;
+  cursor: pointer;
+  transition: all 200ms ease;
+
+  &:hover, &:focus, &:disabled {
+    outline: none;
+    background-color: darken($primary, 20%);
+    border-color: darken($primary, 20%);
+  }
+  &:disabled {
+    cursor: wait;
+    color: $dark;
+  }
+}
+
+.price {
+  height: 30px;
+  width: 70px;
+  background-color: $highlight;
+  text-align: center;
+  line-height: 30px;
+  float: right;
+  position: relative;
+  top: -215px;
+}
+
+.watches {
+  @extend .clearfix;
+
+  margin-bottom: 50px;
+}
+
+.watch {
+  width: 200px;
+  float: left;
+  &:not(:first-child) {
+    margin-left: 53px;
+  }
+}
+
+.watch img {
+  margin-bottom: 15px;
+  height: 200px;
+  width: 200px;
+  background-color: $grey;
+}
+
+.watch__large {
+  display: inline-block;
+}
+
+.watch__info, .order__info, .info {
+  display: inline-block;
+  width: 290px;
+  vertical-align: top;
+  margin-left: 35px;
+  div {
+    margin: 20px 0 40px 0;
+  }
+  span {
+    color: $darkgrey;
+    a {text-decoration: underline;}
+  }
+  .action, .actions {
+    span, b {
+      color: $dark;
+    }
+    .button {
+    }
+  }
+}
+
+.order__info {
+  margin-left: 0;
+  .watch {
+    margin: 50px 0;
+  }
+}
+
+.watch__large img {
+  height: 400px;
+  width: 400px;
+  background-color: $grey;
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+footer {
+  @extend .clearfix;
+
+  height: 110px;
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+  bottom: 0;
+  background-color: $dark;
+  color: $light;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+
+
+  address p:first-child {
+    margin-bottom: 10px;
+  }
+
+  address, div:not(.container), .block {
+    width: 200px;
+    float: left;
+    margin: 40px 0 40px 40px;
+
+    &:first-child {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+
+    &.social {
+      margin: 40px 0 35px 0;
+      float: right;
+      border-radius: 10px;
+      text-align: right;
+    }
+  }
+}
+
+.social img {
+  height: 35px;
+  padding-left: 20px;
+}
+
+form, .simple_form {
+  max-width: 300px;
+  margin: 0 auto 80px auto;
+
+  .input {
+    position: relative;
+  }
+
+  .error {
+    padding: 0 0 0 20px;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    line-height: 30px;
+  }
+  .button {
+    padding: 10px;
+  }
+}
+
+.payment-errors {
+  color: $error;
+}
+
+label, label span, input, textarea {
+  width: 300px;
+}
+
+textarea {
+  height: 300px;
+  padding-top: 40px;
+  line-height: 1.2;
+}
+
+label {
+  margin-bottom: 5px;
+  span {
+    display: block;
+  }
+}
+
+input, textarea {
+  margin-bottom: 20px;
+  border: 1px solid $dark;
+  padding: 5px 10px;
+  clear: right;
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $dark;
+    padding-bottom: 4px;
+  }
+
+  &[data-stripe='exp-month'],
+  &[data-stripe='exp-year'] {
+    display: inline-block;
+    text-align: center;
+  }
+  &[data-stripe='exp-month'] {
+    width: 100px;
+    +span {
+      display: inline-block;
+      width: 43px;
+      text-align: center;
+    }
+  }
+  &[data-stripe='exp-year'] {
+    width: 150px;
+  }
+}
+
+
+.field_with_errors {
+  label, .error {
+    color: $error;
+  }
+
+  input {
+    border-color: $error;
+  }
+}
+
+label {
+  float: left;
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 0 20px -110px 20px;
+  }
+
+  header .flash {
+    width: auto;
+    left: 20px;
+    right: 20px;
+  }
+
+  .watch__large {
+    width: auto;
+    height: auto;
+  }
+
+  .watch {
+    width: 200px;
+
+    &:nth-child(n) {
+      margin-left: 140px;
+      margin-bottom: 50px;
+    }
+  }
+
+  footer {
+    address, div:not(.container), .block {
+      width: 100px;
+      &:first-child {
+        margin-left: 140px;
+      }
+
+      &.social {
+        float: left;
+        width: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    max-width: 400px;
+    margin: 20px;
+  }
+  .watch:nth-child(n) {
+    float: none;
+    margin: 0 auto 50px auto;
+  }
+
+  .watch__info {
+    margin: 30px 0;
+  }
+
+  .contatainer {
+    margin-bottom: -400px;
+  }
+
+  .container:after, footer {
+    height: 200px;
+  }
+
+  footer {
+    address, div:not(.container), .block {
+      float: left;
+      margin-bottom: 0;
+      width: 40%;
+
+      &:nth-child(3) {
+        margin-top: 10px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.social {
+        text-align: left;
+        width: 80%;
+        img {
+          width: 20%;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+
+}
