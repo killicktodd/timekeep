@@ -1,8 +1,9 @@
-<section class="watch_large">
+<section class="watch__large">
 	<!-- include large image here -->
+	<%= image_tag @watch.image.url(:medium) %>
 </section>
 
-<section class="watch info">
+<section class="watch__info">
 	<h2><%= @watch.name %></h2>
 	<%= simple_format @watch.description %>
 	<div>

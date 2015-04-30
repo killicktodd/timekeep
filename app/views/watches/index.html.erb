@@ -6,6 +6,8 @@
 			<%= link_to watch_path(watch) do %>
 				
 				<!-- Add in image here -->
+				<%= image_tag watch.image.url(:medium) %>
+
 				<div class ="price">
 					<!-- link this to new_orders -->
 					<span><%= number_to_currency watch.price, unit: "£" %></span>
