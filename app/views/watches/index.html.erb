@@ -8,7 +8,7 @@
 				<!-- Add in image here -->
 				<div class ="price">
 					<!-- link this to new_orders -->
-					<span><%= watch.price_in_pence %></span>
+					<span><%= number_to_currency watch.price, unit: "£" %></span>
 				</div>
 				
 				<h2><%= watch.name %></h2>
