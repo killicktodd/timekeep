@@ -1,2 +1,21 @@
-<h1>Watches#index</h1>
-<p>Find me in app/views/watches/index.html.erb</p>
+<section class="watches">
+	<% @watches.each do |watch| %>
+		
+		<div class ="watch">
+			
+			<!-- Add in link to showpage -->
+			<%= link_to watch_path(1) do %>
+				
+				<!-- Add in image here -->
+				<div class ="price">
+					<!-- link this to new_orders -->
+					<span><%= watch[:price_in_pence] %></span>
+				</div>
+				
+				<h2><%= watch[:name] %></h2>
+
+			<% end %>
+		</div>
+
+	<% end %>
+</section>
