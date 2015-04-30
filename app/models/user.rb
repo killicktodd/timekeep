@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 		if first_name.present? and last_name.present?
 			[first_name, last_name].join(" ")
 		else name
-		end
+		end	
 	end
 
 	def name
