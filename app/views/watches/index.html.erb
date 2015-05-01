@@ -1,6 +1,6 @@
 <section class="watches">
 	<% @watches.each do |watch| %>
-			<div class ="watch">
+			<div class="watch">
 			
 			<!-- Add in link to showpage -->
 			<%= link_to watch_path(watch) do %>
@@ -8,15 +8,15 @@
 				<!-- Add in image here -->
 				<%= image_tag watch.image.url(:medium) %>
 
-				<div class ="price">
+				<div class="price">
 					<!-- link this to new_orders -->
-					<span><%= number_to_currency watch.price, unit: "£" %></span>
-				</div>
+				<span>
+						<%= link_to(number_to_currency(watch.price, unit: "£"), new_watch_order_path(watch)) %>
+				</span>
 				
-				<h2><%= watch.name %></h2>
-
-			<% end %>
-		</div>
-
+				</div>
+					<h2><%= watch.name %></h2>
+				</div>
+		<% end %>
 	<% end %>
 </section>

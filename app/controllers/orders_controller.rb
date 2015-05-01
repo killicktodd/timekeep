@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :require_user, except [:show]
+  before_action :require_user, except: [:show]
 
   def new
   	@order = Order.new
@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
 
   def create
   	# Find the watch
-  	@watch = Watch.find(params[watch_id])
+  	@watch = Watch.find(params[:watch_id])
   	# Create a new order with watch_id = @watch.id
   	@order = @watch.orders.new(order_params)
   	# Set user_id = current_user_id
@@ -19,7 +19,8 @@ class OrdersController < ApplicationController
   	else
   		flash[:error] = "Please check form for errors and try again"
   		render :new
-  end
+  	end
+	end
 
   def show
   	@order = Order.find(params[:id])
@@ -28,7 +29,7 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-  	params.require(:order).perm(:stripe_token)
+  	params.require(:order).permit(:stripe_token)
   end
 
 end

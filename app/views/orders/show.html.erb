@@ -2,7 +2,7 @@
 	<h2> Thank You </h2>
 	<h3> Order No. #<%= @order.id %></h3> 
 
-	<p> Your account has been debited <%= number_to_currency @order.watch.price, unit: "£" %></p>
+	<p> Your account has been debited <%= number_to_currency @order.watch.price, unit: "£"%></p>
 	</br>
 	<p> Your <em> <%= link_to @order.watch.name, watch_path(@order.watch) %></em> will be dispatched soon </p>
 
