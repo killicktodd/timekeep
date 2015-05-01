@@ -51,4 +51,4 @@ group :production do
 	gem 'rails_12factor'
 end
 
-Ruby '2.1.5'
+ruby '2.1.5'
