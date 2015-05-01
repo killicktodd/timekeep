@@ -23,8 +23,8 @@ class SessionsController < ApplicationController
   end
 
   def show
+    require_user
   end
-
 
   def destroy
   	reset_session

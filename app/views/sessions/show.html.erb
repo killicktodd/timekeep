@@ -1,0 +1,19 @@
+<h2> Account Settings for <%= current_user.full_name %></h2>
+
+<section class="orders__recent">
+	<h3>Recent Orders</h3>
+	</br>
+		<!-- Loop over recent orders -->
+		<!-- Purchased on DATE -->
+</section>
+</br>
+<section class="recent__uploads">
+	<h3>Recent Uploads</h3>
+	</br>
+		<!-- Loop over recent uploads -->
+		<% current_user.watches.each do |watch| %>
+			<h4> <%= link_to watch.name, watch_path(watch) %></h4>
+			<p> Uploaded <%= time_ago_in_words watch.created_at %> ago.</p>
+			</br>
+		<% end %>
+</section>

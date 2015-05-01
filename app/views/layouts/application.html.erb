@@ -16,7 +16,7 @@
 			
 			<div class="actions">
 				<% if logged_in? %>
-					<%= link_to current_user.name %>
+					<%= link_to current_user.full_name, session_path %>
 					<%= link_to "Log out", session_path, method: :delete, class: :button %>
 				<% else %>
 					<%= link_to "Log in", new_session_path %>
