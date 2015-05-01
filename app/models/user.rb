@@ -12,5 +12,12 @@ class User < ActiveRecord::Base
 
 	def name
 		first_name || username || email
+		if first_name.present?
+				first_name
+		elsif username.present?
+				username
+		else
+				email
+		end
 	end
 end
