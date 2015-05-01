@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150430151432) do
+ActiveRecord::Schema.define(version: 20150501114638) do
+
+  create_table "orders", force: true do |t|
+    t.string   "stripe_token"
+    t.integer  "user_id"
+    t.integer  "watch_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"
