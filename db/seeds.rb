@@ -14,7 +14,8 @@ Watch.create([
 					style: "Black",
 					gender: "Unisex",
 					brand: "Swatch",
-					pre_owned: "false"
+					pre_owned: "false",
+          user: User.first
 				},
   				{
   					name: "Classic Digital Casio", 
@@ -23,7 +24,8 @@ Watch.create([
   					style: "Silver with yellow face",
 					gender: "Unisex",
 					brand: "Casio",
-					pre_owned: "false"
+					pre_owned: "false",
+          user: User.first
   				},
   				{
   					name: "1960s Vintage Raketa", 
@@ -32,7 +34,8 @@ Watch.create([
   					style: "Retro",
 					gender: "Unisex",
 					brand: "Raketa",
-					pre_owned: "true"
+					pre_owned: "true",
+          user: User.first
   				},
   				{
   					name: "Max Bill Chronoscope", 
@@ -41,6 +44,7 @@ Watch.create([
   					style: "White face",
 					gender: "Unisex",
 					brand: "Junghans",
-					pre_owned: "false"
+					pre_owned: "false",
+          user: User.first
   				}
   			])
