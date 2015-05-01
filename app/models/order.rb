@@ -7,10 +7,26 @@ class Order < ActiveRecord::Base
 		Stripe.api_key = Rails.application.secrets.stripe_secret_key
 
 		Stripe::Charge.create(
-		  :amount => 400,
+		  :amount => amount,
 		  :currency => "gbp",
-		  :source => "tok_15xeXRDdG45x16nLgJrvol1Y", # obtained with Stripe.js
-		  :description => "Charge for test@example.com"
+		  :source => stripe_token, # obtained with Stripe.js
+		  :description => "#{user.email} charged for #{watch.name}"
 		)	
+
+		self.save
+
+	rescue Stripe::CardError => e
+		body = e.json_body
+		err = body[:error]
+		if err[:message] == "Your card has insufficient funds" or err[:message] == "Your card was declined"
+			errors.add :base, err[:message]
+		else
+			errors.add :base, "There was a problem charding your card. Try contacting help@timekeep.com"
+		end
+		false
+	end
+
+	def amount
+		watch.price_in_pence 
 	end
 end

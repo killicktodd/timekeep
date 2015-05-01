@@ -1,5 +1,10 @@
+
 <%= simple_form_for @order, url: watch_orders_path do |f| %>
-	<span class="payment-errors"></span>
+	<span class="payment-errors">
+    <% @order.errors.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+  </span>
 
   <div class="form-row">
     <label>
