@@ -1,2 +1,16 @@
-<h1>Orders#show</h1>
-<p>Find me in app/views/orders/show.html.erb</p>
+<section class="order__info">
+	<h2> Thank You </h2>
+	<h3> Order No. #<%= @order.id %></h3> 
+
+	<p> Your account has been debited <%= number_to_currency @order.watch.price, unit: "£" %></p>
+	</br>
+	<p> Your <em> <%= link_to @order.watch.name, watch_path(@order.watch) %></em> will be dispatched soon </p>
+
+	<div class="watch">
+		<%= image_tag @order.watch.image.url(:medium) %>
+	</div>
+</section>
+
+<section>
+	<%= link_to "Need to update your delivery details?", edit_user_path %>
+</section>

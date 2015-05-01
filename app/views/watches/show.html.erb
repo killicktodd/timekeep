@@ -15,7 +15,7 @@
 			<%= link_to "Delete", watch_path(@watch), method: :delete, class: "button", data: {confirm: "Are you sure?"} %>
 		<% else %>
 			<b><%= number_to_currency @watch.price, unit: "£" %></b>
-			<%= link_to "Buy" %>
+			<%= link_to "Buy", new_order_path %>
 		<% end %>
 	</div>
 </section>
