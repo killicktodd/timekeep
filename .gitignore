@@ -17,3 +17,6 @@
 
 # Ignore development images
 /public/system/watches/**/*
+
+# Ignore secrets
+/config/secrets.yml
