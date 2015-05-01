@@ -16,4 +16,4 @@
 /tmp
 
 # Ignore development images
-/system/watchs/*
+/public/system/watches/**/*
