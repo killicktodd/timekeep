@@ -10,12 +10,12 @@
 		<span>Posted by <%= mail_to @watch.user.email, @watch.user.name %></span>
 	</div>
 	<div class="actions">
-		<%# if current user is logged in and owns the watch %>
+		<% if logged_in? and current_user.owns(@watch) %>
 			<%= link_to "Edit", edit_watch_path(@watch) %>
 			<%= link_to "Delete", watch_path(@watch), method: :delete, class: "button", data: {confirm: "Are you sure?"} %>
-		<%# else %>
+		<% else %>
 			<b><%= number_to_currency @watch.price, unit: "£" %></b>
 			<%= link_to "Buy" %>
-		<%# end %>
+		<% end %>
 	</div>
 </section>
