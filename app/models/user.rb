@@ -1,12 +1,18 @@
 class User < ActiveRecord::Base
 	has_secure_password
+	has_many :watches
 
 	validates :email, presence: true
+
+	def owns(resource)
+		self == resource.user
+	end
 
 	def full_name
 		if first_name.present? and last_name.present?
 			[first_name, last_name].join(" ")
-		else name
+		else 
+			name
 		end	
 	end
 
@@ -20,4 +26,6 @@ class User < ActiveRecord::Base
 				email
 		end
 	end
+
+
 end
